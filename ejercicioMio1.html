@@ -1,0 +1,38 @@
+<script>
+/* 
+Escriba una función que tome una cadena de una o más palabras y devuelva 
+la misma cadena, pero con las palabras de cinco o más letras invertidas 
+(al igual que el nombre de este Kata). Las cadenas pasadas consistirán solo
+en letras y espacios. Los espacios se incluirán solo cuando haya más de una 
+palabra presente.
+
+Examples:
+
+spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+spinWords( "This is a test") => returns "This is a test" 
+spinWords( "This is another test" )=> returns "This is rehtona test"
+*/
+
+function spinWords(myCadenaArray) {
+    
+for (let i = 0; i < myCadenaArray.length; i++) {  // recorre el array de las palabras
+
+    if(myCadenaArray[i].length >= 5 ){ // entran solo las palabras que tengan 5 caracteres
+
+    myCadenaArray[i] =myCadenaArray[i].split("").reverse().join(""); // separamos , damos la vuelta y juntamos 
+
+    }
+    
+}
+
+myCadenaArray = myCadenaArray.join(" ") //junta el array y lo convierte en una cadena 
+
+return myCadenaArray
+}
+
+let cadena = prompt("Dada la cadena que introduzcas, se daran la vuelta a las palabras que tengan 5 o mas letras")
+let myCadenaArray = cadena.split(" "); // la cadena de texto la separamos por palabras y las guardamos en una array
+
+document.write(spinWords(myCadenaArray) ) // imprimimos por pantalla el resultado de la funcion spinWords, pasando por parametro el array
+
+</script>

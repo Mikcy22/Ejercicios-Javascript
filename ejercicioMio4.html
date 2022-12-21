@@ -1,0 +1,33 @@
+<script>
+
+/*
+Si el numero introducido es par, lo dividimos entre 2, 
+si el numero es impar, multiplicar por 3 y sumar 1
+
+if(number is even) number = number / 2
+if(number is odd) number = 3*number + 1
+*/
+
+function hotpo(number) {
+    if(number == 1){
+        console.log("-->" + number)
+    }else{
+
+     if(number % 2 == 0){
+        console.log("-->" + number)
+        number = number /2;
+        hotpo(number)
+      }else {
+            console.log("-->" + number)
+            number= 3*number +1     
+            hotpo(number)
+        }
+    }
+}
+
+let number = 12;
+console.log(number)
+console.log(hotpo(number))
+
+
+</script>
